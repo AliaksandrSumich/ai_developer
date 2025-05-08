@@ -1,4 +1,0 @@
-{
-  "content_dir": "content",
-  "prompt": "create echo telegram bot with python and aiogram3. Add the .env file and place bot token there. add requirements.txt file. use python-dotenv library to load bot token Return the updated files as JSON."
-}
