@@ -12,6 +12,19 @@ from config import content_dir, ignore_files, prompt
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+template = """You are an AI code assistant. Our main task to develop the next application: ({main_task})\n
+ List only files, need to be changed or created. 
+ Return only valid JSON in the format:
+ {"comment_for_developer": str,
+ "files":
+  [{\"path_to_file\": string, \"file_text\": string\\ not put here the file name, only whole file content}, ...]  
+  }
+  
+  
+  """
+
+
+
 
 
 
@@ -49,17 +62,19 @@ def call_ai(prompt, files, main_task=''):
         "files": files
     }
 
-    response = client.chat.completions.create(model="gpt-4.1",
+    response = client.chat.completions.create(
+        model="gpt-5",
     messages=[
         {
             "role": "system",
-            "content": "You are an AI code assistant. Our main task to develop the next application: ({main_task})\n List only files, need to be changed or created. Return only valid JSON in the format: [{\"path_to_file\": string, \"file_text\": string\\ not put here the file name. only file content}, ...]".replace("{main_task}", main_task)
+            "content": template.replace("{main_task}", main_task)
         },
         {
             "role": "user",
             "content": json.dumps(user_input)
         }
-    ],
+    ]
+
 )
 
     try:
@@ -82,19 +97,25 @@ def main():
     files = collect_files(content_dir, ignore_files)
     logging.info(f'Files content: {files}')
 
-    with open('main_task.txt', 'r') as f:
+    with open(f'{content_dir}/main_task.txt', 'r') as f:
         main_task = f.read()
 
-    with open('prompt_history.txt', 'r') as f:
+    with open(f'{content_dir}/prompt_history.txt', 'r') as f:
         prompt_history = f.read()
 
-    with open('prompt_history.txt', 'a') as f:
-        f.write(f'\n\n{datetime.datetime.now()} {prompt}')
+    with open(f'{content_dir}/prompt_history.txt', 'a') as f:
+        try:
+            f.write(f'\n\n{datetime.datetime.now()} {prompt}')
+        except Exception as e:
+            print(f'Error in prompt saving: {e}')
 
 
     updated_files = call_ai(f'Previous tasks: ({prompt_history}). Current task: **{prompt}**', files, main_task)
+
     logging.info(f'Updated files: {updated_files}')
-    write_files(content_dir, updated_files)
+
+    print(f'Comment from AI: {updated_files['comment_for_developer']}')
+    write_files(content_dir, updated_files['files'])
     print("Files updated.")
 
 if __name__ == "__main__":
