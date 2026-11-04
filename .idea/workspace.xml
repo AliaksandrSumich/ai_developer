@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d35dadcb-b419-4b2f-b323-4978f6f89ffd" name="Changes" comment="Initial commit">
+    <list default="true" id="d35dadcb-b419-4b2f-b323-4978f6f89ffd" name="Changes" comment="Good for several progects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -29,6 +29,65 @@
     &quot;accountId&quot;: &quot;745b0174-46fa-4120-ad9f-c25b0eb9a0d8&quot;
   }
 }</component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000016787098" />
+      <entry key="MS500" value="1.0178221662044404" />
+      <entry key="S2" value="1.4899666616623515" />
+      <entry key="S5" value="2.25828996659114" />
+      <entry key="S10" value="3.564239402000998" />
+      <entry key="S30" value="7.751973823011758" />
+      <entry key="S60" value="11.242480367660292" />
+      <entry key="M2" value="15.182432788176184" />
+      <entry key="M5" value="19.52292904689962" />
+      <entry key="M10" value="21.56959602664381" />
+      <entry key="M15" value="22.6046580405365" />
+      <entry key="M30" value="30.86092575061253" />
+      <entry key="H1" value="70.51310401308174" />
+      <entry key="H2" value="144.95405391498892" />
+      <entry key="H4" value="220.91951497094257" />
+      <entry key="D1" value="321.2690596827446" />
+      <entry key="W1" value="343.18782232536995" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.8950250724727005" />
+      <entry key="MS500" value="0.9955899591762268" />
+      <entry key="S2" value="1.4821856652322436" />
+      <entry key="S5" value="2.253538228235929" />
+      <entry key="S10" value="3.5602966838511163" />
+      <entry key="S30" value="7.7489119222311045" />
+      <entry key="S60" value="11.240162594907895" />
+      <entry key="M2" value="15.180795080352194" />
+      <entry key="M5" value="19.522054103619595" />
+      <entry key="M10" value="21.56910602147203" />
+      <entry key="M15" value="22.604316337296424" />
+      <entry key="M30" value="30.860722086412927" />
+      <entry key="H1" value="70.51292843770756" />
+      <entry key="H2" value="144.9538947694601" />
+      <entry key="H4" value="220.91939821358048" />
+      <entry key="D1" value="321.2690319195764" />
+      <entry key="W1" value="343.18781809824094" />
+    </decayedShown>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -37,17 +96,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.config.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/alex/PycharmProjects/family_site"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alex/PycharmProjects/flask_ai_chat&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -67,6 +134,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -89,6 +158,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -108,7 +179,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-4ae89fc4d009-d902c0275401-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.25557.70" />
+        <option value="bundled-python-sdk-ebb3072d7bdf-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.11879.98" />
       </set>
     </attachedChunks>
   </component>
@@ -128,12 +199,24 @@
       <option name="project" value="LOCAL" />
       <updated>1746638151000</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Good for several progects">
+      <option name="closed" value="true" />
+      <created>1756639662989</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756639662989</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Good for several progects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Good for several progects" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

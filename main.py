@@ -55,27 +55,29 @@ def collect_files(content_dir, ignore_files=None):
                     logging.error(f'{path} {os.path.relpath(path, content_dir)}, error in read file: {e}')
     return file_data
 
-def call_ai(prompt, files, main_task=''):
+import json
 
+def call_ai(prompt, files, main_task=''):
     user_input = {
         "prompt": prompt,
         "files": files
     }
 
     response = client.chat.completions.create(
-        model="gpt-5",
-    messages=[
-        {
-            "role": "system",
-            "content": template.replace("{main_task}", main_task)
-        },
-        {
-            "role": "user",
-            "content": json.dumps(user_input)
-        }
-    ]
-
-)
+        model="gpt-6.1-sol",
+        messages=[
+            {
+                "role": "system",
+                "content": template.replace("{main_task}", main_task)
+            },
+            {
+                "role": "user",
+                "content": json.dumps(user_input)
+            }
+        ],
+        reasoning_effort='low',
+        response_format={"type": "json_object"}  # ✅ Force JSON output
+    )
 
     try:
         ai_output = response.choices[0].message.content
@@ -99,6 +101,10 @@ def main():
 
     with open(f'{content_dir}/main_task.txt', 'r') as f:
         main_task = f.read()
+
+    if not os.path.exists(f'{content_dir}/prompt_history.txt'):
+        with open(f'{content_dir}/prompt_history.txt', 'w') as f:
+            f.write(' ')
 
     with open(f'{content_dir}/prompt_history.txt', 'r') as f:
         prompt_history = f.read()
